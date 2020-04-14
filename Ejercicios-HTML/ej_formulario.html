@@ -19,29 +19,30 @@
 
 <h3>Suscribase a Nuestro Portal de Noticias! Crear una cuenta es rápido!</h3>
 
-<form id="form1">
+<form id="formulario_subscripcion">
 
-    <p> Nombre: <input type="text" name="nombre"/> </p>
-    <p> Apellido: <input type="apellido" name="apellido"/> </p>
+    <p> <label for="nombre">Nombre: </label> <input type="text" name="nombre" placeholder="Nombre" id="nombre"/>  </p>
+    <p> <label for="apellido">Apellido: </label> <input type="text" name="apellido" placeholder="Apellido" id="apellido"/> </p>
 
     <p>Sexo:
-    <input type="radio" name="gender" value="male" checked> Masculino
-    <input type="radio" name="gender" value="female"> Femenino </p>
+    <input type="radio" name="gender" value="male" checked id="masculino"> <label for="masculino">Masculino</label>
+    <input type="radio" name="gender" value="female" id="femenino"> <label for="femenino">Femenino</label> </p>
 
-    <p>Edad:
-    <input type="number" name="points" min="0" max="100" step="1" value="18"></p>
-
-
-    <p> Email: <input type="email" name="email"/> </p>
-    <p> Usuario: <input type="user" name="user"/> </p>
-    <p> Password: <input type="psw" name="psw"/> </p>
-    <p> Confirmar password: <input type="psw" name="psw"/> </p>
+    <p> <label for="edad"> Edad: </label>
+    <input type="number" name="age" min="0" max="100" step="1" value="18" placeholder="edad" id="edad"></p>
 
 
-    <p>Tipo de servicio <select name="service">
-        <option value="analisisMat">Free</option>
-        <option value="algebra">Standard</option>
-        <option value="program1">Premium</option>
+    <p> <label for="email"> Email: </label> <input type="email" name="email" placeholder="email@dominio.com" id="email"/> </p>
+    <p> <label for="usuario"> Usuario: </label> <input type="text" name="user" placeholder="Usuario" id="usuario"/> </p>
+    <p> <label for="contraseña"> Password: </label> <input type="text" name="psw" placeholder="Contraseña" id="contraseña"/> </p>
+    <p> <label for="confirmar contraseña"> Confirmar password: </label> <input type="text" name="psw" placeholder="Repetir contraseña" id="confirmar contraseña"/> </p>
+
+
+    <p> <label for="Tipo de servicio"> Tipo de servicio </label>
+        <select id="Tipo de servicio">
+        <option value="free">Free</option>
+        <option value="standart">Standard</option>
+        <option value="premium">Premium</option>
 
     </select>
     </p>
@@ -50,14 +51,15 @@
 
     <p>Tema(s):</p>
     <p>
-        <input type="checkbox" name="tema1" value="Política"> Política<br>
-        <input type="checkbox" name="tema2" value="Negocios"> Negocios<br>
-        <input type="checkbox" name="tema3" value=" Tecnología">  Tecnología<br>
-        <input type="checkbox" name="tema4" value="Salud"> Salud<br>
+        <input type="checkbox" name="tema1" value="Política" id="politica"> <label for="politica">Política </label><br>
+        <input type="checkbox" name="tema2" value="Negocios" id="negocios"> <label for="negocios">Negocios </label><br>
+        <input type="checkbox" name="tema3" value=" Tecnología" id="tecnologia">  <label for="tecnologia">Tecnología </label><br>
+        <input type="checkbox" name="tema4" value="Salud" id="salud"> <label for="salud">Salud </label><br>
     </p>
 
     <p>
-        Agregue un comentario: <input type="text" name="nombre"/>
+        <label for="comentario">Agregue un comentario: </label> <textarea name="comentarios" rows="10" cols="40" id="comentario"> </textarea>
+
     </p>
 
     <button type="button">Enviar</button>
