@@ -1,6 +1,11 @@
 /**
- * Created by Agus on 6/5/2017.
+ * Comversion de unidades (metros,pies,yardas,pulgadas)
+ * @method conversor
+ * @param {string} id - el id de los inputs de metros yardas pies o pulgadas
+ * @param {number} valor - El valor de cada input mencionado
+ * @return
  */
+
 
 function conversor(id, valor) {
 
@@ -32,10 +37,3 @@ function conversor(id, valor) {
 
 
 
-/**
- * Descripción
- * @method Nombre de la función
- * @param Parámetro A
- * @param Parámetro B
- * @return Valor que retorna
- */
