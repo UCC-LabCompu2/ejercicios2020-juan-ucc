@@ -10,6 +10,12 @@
 function conversor(id, valor) {
     var metro, yarda, pulgada, pie;
 
+    if (valor.includes(",")){
+        valor = valor.replace(",",".");
+
+    }
+
+
     if (isNaN(valor)){
         alert('Se ingreso un valor no numerico')
         metro = "";
@@ -95,26 +101,50 @@ function calcular_suma() {
     var num1, num2;
     num1 = document.getElementsByName("sum_num1")[0].value;
     num2 = document.getElementsByName("sum_num2")[0].value;
-    document.getElementsByName("sum_total")[0].value = Number(num1) + Number(num2);
+    document.getElementsByName("sum_total")[0].innerHTML = Number(num1) + Number(num2);
 }
 
 function calcular_res() {
     var num1, num2;
     num1 = document.getElementsByName("res_num1")[0].value;
     num2 = document.getElementsByName("res_num2")[0].value;
-    document.getElementsByName("res_total")[0].value = Number(num1) - Number(num2);
+    document.getElementsByName("res_total")[0].innerHTML = Number(num1) - Number(num2);
 }
 
 function calcular_mul() {
     var num1, num2;
     num1 = document.getElementsByName("mul_num1")[0].value;
     num2 = document.getElementsByName("mul_num2")[0].value;
-    document.getElementsByName("mul_total")[0].value = Number(num1) * Number(num2);
+    document.getElementsByName("mul_total")[0].innerHTML = Number(num1) * Number(num2);
 }
 
 function calcular_div() {
     var num1, num2;
     num1 = document.getElementsByName("div_num1")[0].value;
     num2 = document.getElementsByName("div_num2")[0].value;
-    document.getElementsByName("div_total")[0].value = Number(num1) / Number(num2);
+    document.getElementsByName("div_total")[0].innerHTML = Number(num1) / Number(num2);
+}
+
+function cargarWeb() {
+
+    var cant, unidad, urlComp;
+
+    cant = document.getElementById("distancia").value;
+    unidad = document.getElementsByName("unidades")[0].value;
+    urlComp = "segundaWeb.html#" + cant + "#" + unidad;
+    window.open(urlComp);
+
+})
+
+function cargarRes() {
+
+        var urlComp, can, un;
+
+        urlComp = window.location.href.split("/")[5];
+
+        cant = urlComp.split("#")[1];
+
+        un = urlComp.split("#")[2];
+
+        document.getElementById("dist").value = can + " " + un;
 }
