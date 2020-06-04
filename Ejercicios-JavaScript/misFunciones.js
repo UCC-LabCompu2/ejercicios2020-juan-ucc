@@ -134,7 +134,7 @@ function cargarWeb() {
     urlComp = "segundaWeb.html#" + cant + "#" + unidad;
     window.open(urlComp);
 
-})
+}
 
 function cargarRes() {
 
@@ -147,4 +147,21 @@ function cargarRes() {
         un = urlComp.split("#")[2];
 
         document.getElementById("dist").value = can + " " + un;
+}
+
+function dibujarCirCuad() {
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var xMax = canvas.width;
+    var yMax = canvas.height;
+    ctx.fillStyle = "#333899";
+    var margen = 5;
+    ctx.fillRect(margen,yMax-40-margen,40,40);
+
+    ctx.arc(xMax/2,yMax/2,17,0,2*Math.PI);
+    ctx.stroke();
+    ctx.fillStyle = "#338922";
+    ctx.fill();
+
 }
