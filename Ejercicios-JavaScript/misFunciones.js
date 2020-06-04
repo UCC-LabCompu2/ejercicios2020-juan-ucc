@@ -8,30 +8,40 @@
 
 
 function conversor(id, valor) {
+    var metro, yarda, pulgada, pie;
 
     if (isNaN(valor)){
         alert('Se ingreso un valor no numerico')
-        document.form_unidades.unid_metro.value = "";
-        document.form_unidades.unid_pulgada.value = "";
-        document.form_unidades.unid_pie.value = "";
-        document.form_unidades.unid_yarda.value = "";
+        metro = "";
+        pulgada = "";
+        pie = "";
+        yarda = "";
     } else if (id=="metro"){
-        document.form_unidades.unid_pulgada.value = 39.3701*valor;
-        document.form_unidades.unid_pie.value = 3.28048*valor;
-        document.form_unidades.unid_yarda.value = 1.09361*valor;
+        metro = valor;
+        pulgada = 39.3701*valor;
+        pie = 3.28048*valor;
+        yarda = 1.09361*valor;
     } else if (id=="pulgada"){
-        document.form_unidades.unid_metro.value = 0.0254*valor;
-        document.form_unidades.unid_pie.value = 0.0833333*valor;
-        document.form_unidades.unid_yarda.value = 0.0277778*valor;
+        pulgada = valor;
+        metro = 0.0254*valor;
+        pie = 0.0833333*valor;
+        yarda = 0.0277778*valor;
     } else if (id=="pie"){
-        document.form_unidades.unid_pulgada.value = 12*valor;
-        document.form_unidades.unid_metro.value = 0.3048*valor;
-        document.form_unidades.unid_yarda.value = 0.333333*valor;
+        pie = valor;
+        pulgada = 12*valor;
+        metro = 0.3048*valor;
+        yarda = 0.333333*valor;
     } else if (id=="yarda"){
-        document.form_unidades.unid_pulgada.value = 36*valor;
-        document.form_unidades.unid_pie.value = 3*valor;
-        document.form_unidades.unid_metro.value = 0.9144*valor;
+        yarda = valor;
+        pulgada = 36*valor;
+        pie = 3*valor;
+        metro = 0.9144*valor;
     }
+
+    document.form_unidades.unid_yarda.value = Math.round(yarda*100)/100;
+    document.form_unidades.unid_metro.value = Math.round(metro*100)/100;
+    document.form_unidades.unid_pie.value = Math.round(pie*100)/100;
+    document.form_unidades.unid_pulgada.value = Math.round(pulgada*100)/100;
 
 }
 
