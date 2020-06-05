@@ -192,3 +192,68 @@ function limpiarCanvas(){
     canvas.width = canvas.width;
 
 }
+
+
+function dibujarCuadriculado(){
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    var altMax = canvas.height;
+    var anchoMax = canvas.width;
+
+
+    ctx.beginPath();
+    for (var i = 0;i<altMax;){
+        ctx.moveTo(0  ,i);
+        ctx.lineTo(anchoMax ,i);
+        ctx.strokeStyle="#311818";
+        ctx.stroke();
+
+        i=i+20;
+
+
+    }
+    ctx.closePath();
+
+    ctx.beginPath();
+    for (var a = 0; a<anchoMax;) {
+
+        ctx.moveTo(a  ,0);
+        ctx.lineTo(a ,altMax);
+        ctx.strokeStyle="#925649";
+        ctx.stroke();
+
+
+
+
+        a = a + 20;
+    }
+    ctx.closePath();
+
+
+ctx.beginPath();
+
+    ctx.moveTo(0  ,altMax/2);
+    ctx.lineTo(anchoMax ,altMax/2);
+    ctx.strokeStyle="#c4be50";
+    ctx.stroke();
+ctx.closePath();
+
+
+ctx.beginPath();
+    ctx.moveTo(anchoMax/2  ,0);
+    ctx.lineTo(anchoMax/2 ,altMax/2);
+    ctx.strokeStyle="#c4be50";
+    ctx.stroke();
+ctx.closePath();
+}
+
+
+
+
+
+function animarAuto(){
+
+    var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+
+}
