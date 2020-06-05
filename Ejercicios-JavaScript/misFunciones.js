@@ -176,11 +176,19 @@ function dibujar(event) {
     var posY = event.clientY;
 
 
-    canvas.onmousedown = function(){bandera = true};
-    canvas.onmouseup = function(){bandera = false};
+    canvas.onmousedown = function() {bandera = true};
+    canvas.onmouseup = function() {bandera = false};
     if(bandera){
-        tx.fillRect(posX,posY,3,3);
-        ctx.fill();
+        ctx.fillRect(posX,posY,5,5);
+        ctx.fill;
     }
+
+}
+
+function limpiarCanvas(){
+    var canvas = document.getElementById("canvasPaint");
+    var ctx = canvas.getContext("2d");
+
+    canvas.width = canvas.width;
 
 }
