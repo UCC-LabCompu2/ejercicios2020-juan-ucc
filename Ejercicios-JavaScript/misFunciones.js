@@ -165,3 +165,22 @@ function dibujarCirCuad() {
     ctx.fill();
 
 }
+
+
+function dibujar(event) {
+
+    var canvas = document.getElementById("canvasPaint");
+    var ctx = canvas.getContext ("2d");
+
+    var posX = event.clientX;
+    var posY = event.clientY;
+
+
+    canvas.onmousedown = function(){bandera = true};
+    canvas.onmouseup = function(){bandera = false};
+    if(bandera){
+        tx.fillRect(posX,posY,3,3);
+        ctx.fill();
+    }
+
+}
